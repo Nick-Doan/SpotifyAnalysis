@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <title>Music Attributes and its Effect on Popularity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #76887c;
+            margin: 0;
+            padding: 0;
+            display: flex-start;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            width: 60%;
+            padding: 20px;
+            box-shadow: 0 0 10px #000000;
+            border-radius: 20px;
+        }
+        h1, h2 {
+            color: #000000;
+        }
+        .team-members, .table-of-contents {
+            margin-bottom: 20px;
+        }
+        a {
+            color: #090cdf;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BTA 350 Analytics Project</h1>
+        <div class="team-members">
+            <h2>Spotify Analysis created by:</h2>
+            <ul>
+                <li>Nick Doan</li>
+            </ul>
+
+            <h2>Source Code</h2>
+            <ul>link</ul>
+
+
+        </div>
+        <div class="table-of-contents">
+            <h2>Table of contents</h2>
+            <ul>
+                <li><a href="#introduction">Project Section 1: Introduction</a>
+                    <ul>
+                        <li><a href="#imports">Dataset: 30000 Spotify Songs</a></li>
+                    </ul></li>
+
+                <li>
+                    <a href="#context">Project Section 2: CONTEXT</a>
+                </li>
+                <li><a href="#problem">Project Section 3: Defining the problem</a></li>
+                <li><a href="#data">Project Section 4: Data</a></li>
+                <li><a href="#analysis">Project Section 5: Analysis</a></li>
+                <li><a href="#evaluation">Project Section 6: Evaluation</a></li>
+                <li><a href="#interpretation">Project Section 7: Interpretation</a></li>
+                <li><a href="#recommendations">Project Section 8: Recommendations</a></li>
+                <li><a href="#executive-summary">Project Section 9: EXECUTIVE SUMMARY</a></li>
+                <li><a href="#presentation">Project Section 10: Presentation</a></li>
+        </div>
+         
+
+        <div id="introduction">
+            <h2>Project Section 1: Introduction</h2>
+                <p>     The data is called “30000 Spotify Songs” on Kaggle. It was uploaded by Joakim Arvidsson, a Grand Master on Kaggle. The data comes from Spotify via the spotifyr package. It is a package that pulls data from spotifiy’s API (https://www.rcharlie.com/spotifyr/). The data has several variables such as: track_id, track_name, track_artist, track_popularity, and       track_album_id. 
+                    The data is from Spotify. Spotify is a digital music streaming platform that offers millions of songs, podcasts, and other audio content. Spotify is offered across various platforms such as IOS and Android.  
+                    My approach to the data has several components. The first is asking the question, “How can we get consumers to listen to more songs?” According to Invespodia, 95% of Spotify’s revenue comes from premium subscriptions (How Spotify Makes Money: Premium Services and Ad-Supported Services). A big part of why people pay for Spotify is for the ad-free experience, unlimited skips, personalized playlists, etc (The Consumer Decision Journey Report | Spotify Ads). Given this research we know that the more that we can get people to listen to music on the platform, the more likely they are to 1.) listen to music with ad-support or 2.) pay for a premium account. The second step of analyzing the data is to do exploratory data analysis. To find patterns and trends in the data that will help support Spotify take actionable steps to answer the business question I proposed.  The third step will to do formal modeling. Fourth interpretation. Fifth communication.
+                    </p></div>
+        <div id="evaluation">     
+            <h2>Project Section 2: CONTEXT</h2>
+                <p>The data is called “30000 Spotify Songs” on Kaggle. It was uploaded by Joakim Arvidsson, a Grand Master on Kaggle. The data comes from Spotify via the spotifyr package. It is a package that pulls data from spotifiy’s API (https://www.rcharlie.com/spotifyr/). The data has several variables such as: track_id, track_name, track_artist, track_popularity, and       track_album_id. 
+                    The data is from Spotify. Spotify is a digital music streaming platform that offers millions of songs, podcasts, and other audio content. Spotify is offered across various platforms such as IOS and Android.  
+                    My approach to the data has several components. The first is asking the question, “How can we get consumers to listen to more songs?” According to Invespodia, 95% of Spotify’s revenue comes from premium subscriptions (How Spotify Makes Money: Premium Services and Ad-Supported Services). A big part of why people pay for Spotify is for the ad-free experience, unlimited skips, personalized playlists, etc (The Consumer Decision Journey Report | Spotify Ads). Given this research we know that the more that we can get people to listen to music on the platform, the more likely they are to 1.) listen to music with ad-support or 2.) pay for a premium account. The second step of analyzing the data is to do exploratory data analysis. To find patterns and trends in the data that will help support Spotify take actionable steps to answer the business question I proposed.  The third step will to do formal modeling. Fourth interpretation. Fifth communication.
+                    </p>
+        <div id="problem">     
+            <h2>Project Section 3: Defining the problem</h2>
+
+            The problem definition is “How can Spotify improve the profit margins of their core business which is their digital music streaming services?” My business question definition is “How can we get consumers to listen to more songs and longer?” The problem's relevance is that Spotify has never been profitable for an entire fiscal year in its history. A company can only remain unprofitable for so long. It is crucial that Spotify find a path toward profitability. Analyzing Spotify’s user data is crucial as users are the main source of revenue for Spotify. By improving customer experience and retention, Spotify can improve its profit margins. Prioritizing data-driven insights will create a pathway toward sustainable profitability within its core music streaming business. 
+            The profitability challenge is not merely a financial problem; it is integral to Spotify's ability to innovate, invest in content acquisition, and expand its market share against competitors. Moreover, as the digital streaming landscape evolves with new entrants and changing consumer preferences, Spotify must adapt to remain relevant. Analyzing user data isn't just about understanding current behaviors; it is about anticipating future trends and evolving alongside user demands. By prioritizing data-driven insights and refining its platform to better serve user needs, Spotify can secure its position as a market leader and pave the way for sustainable profitability in an ever-changing digital music landscape.
+            
+
+            
+        <div id="data">     
+            <h2>Project Section 4: Data</h2>
+    
+<p>Libraries used:</p>
+<pre><code class="language-python">
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from ydata_profiling import ProfileReport
+from collections import Counter</code></pre>
+
+
+
+<p>My dataset 30000 spotify songs” has over 30000 entries of data most of the data types are either float or object values. Most of the data is qualitative such as track name, track artists, etc. There are some quantitative variable such as duration, tempo, and liveliness. 
+</p>
+
+<pre><code class="language-python">
+    df.info()
+
+    Index: 30130 entries, 0 to 32832
+    Data columns (total 23 columns):
+     #   Column                    Non-Null Count  Dtype  
+    ---  ------                    --------------  -----  
+     0   track_id                  30130 non-null  object 
+     1   track_name                30130 non-null  object 
+     2   track_artist              30130 non-null  object 
+     3   track_popularity          30130 non-null  int64  
+     4   track_album_id            30130 non-null  object 
+     5   track_album_name          30130 non-null  object 
+     6   track_album_release_date  30130 non-null  object 
+     7   playlist_name             30130 non-null  object 
+     8   playlist_id               30130 non-null  object 
+     9   playlist_genre            30130 non-null  object 
+     10  playlist_subgenre         30130 non-null  object 
+     11  danceability              30130 non-null  float64
+     12  energy                    30130 non-null  float64
+     13  key                       30130 non-null  int64  
+     14  loudness                  30130 non-null  float64
+     15  mode                      30130 non-null  int64  
+     16  speechiness               30130 non-null  float64
+     17  acousticness              30130 non-null  float64
+     18  instrumentalness          30130 non-null  float64
+     19  liveness                  30130 non-null  float64
+     20  valence                   30130 non-null  float64
+     21  tempo                     30130 non-null  float64
+     22  duration_ms               30130 non-null  int64  
+    dtypes: float64(9), int64(4), object(10)
+    memory usage: 5.5+ MB</code></pre>
+
+<p>I looked at several things for my exploratory data analysis. I first created a heatmap to find some correlations. 
+</p>
+
+
+<pre><code class="language-python">
+selected_columns = ['track_popularity', 
+                    'danceability',
+                    'energy',
+                    'loudness',
+                    'speechiness',
+                    'acousticness',
+                    'instrumentalness',
+                    'liveness', 
+                    'valence', 
+                    'tempo', 
+                    'duration_ms'
+                   ]
+
+df_set = df[selected_columns]
+
+plt.figure(figsize=(16, 8))
+sns.set(style="whitegrid")
+sns.heatmap(df_set.corr(),annot=True, cmap='YlGnBu')</code></pre>
+                
+
+
+
+<img src="images/1716086704775.png" />
+
+<p> I then looked for relationships for my qualitative variables like track_artists and track_name. I also looked at correlations for others variableslike genre and track popularity, but there was not much correlation. 
+I also looked at the summary statistics. Analyzing the summary statistics did not offer any noticeable patterns given the nature of my data.</p>
+
+<img src="images/describe.png", width="1150", height="400" />
+
+<p>This data set is right for my business question. The data is derived directly from Spotify’s own API and the user that uploaded the data is a highly regarded member of the Kaggle community. With over 30,000 songs, this is a big enough data set to analyze and draw some analysis.  
+    I also looked at duration_ms to see if there was any correlation with track duration and popularity. Looking at the heatmap there was little to no correlation. What was interesting to me however was that the histogram for the data was right skewed. Further analysis demonstrated to me however that this was not meaningful since I had already determined there was little to no correlation between song duration and popularity. 
+    </p>
+
+<img src="images/duration.png", width="1160">
+
+
+
+
+
+
+
+
+
+        <div id="analysis">   
+                <h2>Project Section 5: Analysis</h2></div>
+
+        <div id="evaluation">     
+                    <h2>Project Section 6: Evaluation</h2></div>
+
+
+        <div id="interpretation">     
+                        <h2>Project Section 7: Interpretation</h2></div>
+
+
+
+
+        <div id="recommendations">     
+                        <h2>Project Section 8: Recommendations</h2></div>
+
+
+         <div id="executive-summary">     
+                 <h2>Project Section 9: EXECUTIVE SUMMARY</h2></div>
+
+        <div id="presentation">     
+                    <h2>Project Section 10: Presentation</h2></div>      
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>    
+
+
+</body>
+</html>
