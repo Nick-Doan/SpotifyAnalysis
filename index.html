@@ -184,9 +184,17 @@ I also looked at the summary statistics. Analyzing the summary statistics did no
 
 <img src="images/duration.png", width="1160">
 
+<p>Another thing I decided to explore was the frequency of certain words. Words in tracks, genres, artists, album id, playlist_name, and album names. I did not find it particularly insightful. Most of the high frequency words were words like “the”, “you”, “me”, etc. Playlist name however did yield some insight which led to exploring the relationship more in PowerBI. 
+</p>
+
+<img src="images/wordlcoud1.png">
+
+<img src="images/wordcloud2.png">
 
 
+<p>Here is the chart I analyzed in PowerBI when it comes to track popularity by playlist name.</p>
 
+<img src="images/popularity and track.png", width="1150">
 
 
 
@@ -194,6 +202,64 @@ I also looked at the summary statistics. Analyzing the summary statistics did no
 
         <div id="analysis">   
                 <h2>Project Section 5: Analysis</h2></div>
+
+<p>	The outcome variable for my analysis is track_popularity. For my analysis I decided to look at what variables could affect track popularity. 
+    I conducted most of my analysis using Python. I used several libraries:
+
+    <pre><code class="language-python">
+        import numpy as np
+        import pandas as pd
+        import seaborn as sns
+        import matplotlib.pyplot as plt
+        from ydata_profiling import ProfileReport
+        from collections import Counter
+    </pre></code>
+
+
+
+
+    </p>
+
+<p>I  cleaned the data using:
+    <pre><code class="language-python">df.isnull().sum()</pre></code> 
+ 
+    <p>This drops all null values from the data. </p>
+    
+    I then dropped all the zeros from track_popularity as I found it was skewing my data. 
+    
+    
+    <pre><code class="language-python">df = df[df['track_popularity'] != 0] .</pre></code> 
+ 
+    
+    From here I exported the data into a CSV file for further analysis in PowerBI:
+    
+    
+    <pre><code class="language-python">df.to_csv('cleanedspotify.csv') </pre></code> 
+    
+
+<p>For the first portion of my analysis, I first created a heatmap of the data to figure out which variables may be useful to look at that could be useful in answering the business question: 
+</p>
+
+
+<img src="images/1716086704775.png">
+
+<p>
+Looking the the heatmap I saw that energy and loudness have some correlation. I also saw dancebility and valence, and accousticness and energy. I created several scatterplots to look for correlations in my data.</p>
+
+<pre><code class="language-python">correlation_coefficient = df_set['energy'].corr(df_set['loudness'])
+sns.scatterplot(data= df_set, x= 'energy', y='loudness', hue='track_popularity')
+plt.text(0.05, 0.95, f'Correlation Coefficient: {correlation_coefficient:.2f}', transform=plt.gca().transAxes)
+</pre></code> 
+
+<img src="images/scatterplot1.png">
+
+
+<P>A correlation of 0.68 is considered a strong positive correlation. We can also visually see this as most of the data is near each other in a linear line indicating that there is a positive correlation.</p>
+
+
+
+
+
 
         <div id="evaluation">     
                     <h2>Project Section 6: Evaluation</h2></div>
