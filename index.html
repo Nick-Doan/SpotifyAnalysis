@@ -206,14 +206,12 @@ I also looked at the summary statistics. Analyzing the summary statistics did no
 <p>	The outcome variable for my analysis is track_popularity. For my analysis I decided to look at what variables could affect track popularity. 
     I conducted most of my analysis using Python. I used several libraries:
 
-    <pre><code class="language-python">
-        import numpy as np
-        import pandas as pd
-        import seaborn as sns
-        import matplotlib.pyplot as plt
-        from ydata_profiling import ProfileReport
-        from collections import Counter
-    </pre></code>
+    <pre><code class="language-python">import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from ydata_profiling import ProfileReport
+from collections import Counter</pre></code>
 
 
 
@@ -257,6 +255,53 @@ plt.text(0.05, 0.95, f'Correlation Coefficient: {correlation_coefficient:.2f}', 
 <P>A correlation of 0.68 is considered a strong positive correlation. We can also visually see this as most of the data is near each other in a linear line indicating that there is a positive correlation.</p>
 
 
+
+<p>I then looked at danceability and valence:</p>
+<pre><code class= "language-python">correlation_coefficient = df_set['danceability'].corr(df_set['valence'])
+
+plt.figure(figsize=(10, 6))
+sns.scatterplot(data=df_set, x='danceability', y='valence', hue='track_popularity')
+plt.title(f'Scatterplot of Danceability vs. Valence (Correlation Coefficient: {correlation_coefficient:.2f})')
+plt.xlabel('Danceability')
+plt.ylabel('Valence')
+plt.show()
+</pre></code>
+
+<img src="images/scatterplot2.png">
+
+<p>Here we can see that the data have as correlation of 0.33 which means that there is little to no correlation. We can visually see this as the data points are scattered everywhere.</p>
+
+
+<p>The variables that I decided to look at next were energy and acousticness:</p>
+
+<pre><code class= "language-python">correlation_coefficient = df_set['energy'].corr(df_set['acousticness'])
+
+plt.figure(figsize=(10, 6))
+sns.scatterplot(data=df_set, x='energy', y='acousticness', hue='track_popularity')
+plt.text(0.05, 0.97, f'Correlation Coefficient: {correlation_coefficient:.2f}', transform=plt.gca().transAxes)
+plt.xlabel('Energy')
+plt.ylabel('Acousticness')
+plt.show()
+</pre></code>
+
+<img src="images/scatterplot3.png">
+
+<p>The data have as correlation of -0.54 which means that there is little to no correlation. We can visually see this as the data points are scattered everywhere.</p>
+
+
+
+
+
+<P>Looking at the correlations in the heatmap did not give me a clear view of the data. Quantitative analysis did not yield as much insight as I thought it would. I decided to analyze the qualitative data. This led to me to create a chart for track_name and popularity:</P>
+<pre><code class= "language-python">plt.figure(figsize=(40, 30))
+sns.set(style="whitegrid")
+    
+x = df.groupby("track_name")["track_popularity"].mean().sort_values(ascending=False).head(10)
+axis = sns.barplot(x=x.index, y=x)
+    
+axis.set_ylabel('Popularity', fontsize=40)
+axis.set_xlabel('song title', fontsize=40)
+axis.tick_params(labelsize=20)  </code>
 
 
 
