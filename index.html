@@ -9,11 +9,11 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #76887c;
-            margin: 0;
+            margin: auto;
             padding: 0;
-            display: flex-start;
+            display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             height: 100vh;
         }
         .container {
@@ -171,30 +171,30 @@ sns.heatmap(df_set.corr(),annot=True, cmap='YlGnBu')</code></pre>
 
 
 
-<img src="images/1716086704775.png" />
+<img src="images/1716086704775.png", width="100%"/>
 
 <p> I then looked for relationships for my qualitative variables like track_artists and track_name. I also looked at correlations for others variableslike genre and track popularity, but there was not much correlation. 
 I also looked at the summary statistics. Analyzing the summary statistics did not offer any noticeable patterns given the nature of my data.</p>
 
-<img src="images/describe.png", width="1150", height="400" />
+<img src="images/describe.png", width="100%", height="100%" />
 
 <p>This data set is right for my business question. The data is derived directly from Spotify’s own API and the user that uploaded the data is a highly regarded member of the Kaggle community. With over 30,000 songs, this is a big enough data set to analyze and draw some analysis.  
     I also looked at duration_ms to see if there was any correlation with track duration and popularity. Looking at the heatmap there was little to no correlation. What was interesting to me however was that the histogram for the data was right skewed. Further analysis demonstrated to me however that this was not meaningful since I had already determined there was little to no correlation between song duration and popularity. 
     </p>
 
-<img src="images/duration.png", width="1160">
+<img src="images/duration.png", width="100%">
 
 <p>Another thing I decided to explore was the frequency of certain words. Words in tracks, genres, artists, album id, playlist_name, and album names. I did not find it particularly insightful. Most of the high frequency words were words like “the”, “you”, “me”, etc. Playlist name however did yield some insight which led to exploring the relationship more in PowerBI. 
 </p>
 
-<img src="images/wordlcoud1.png">
+<img src="images/wordlcoud1.png", width="100%">
 
-<img src="images/wordcloud2.png">
+<img src="images/wordcloud2.png", width="100%">
 
 
 <p>Here is the chart I analyzed in PowerBI when it comes to track popularity by playlist name.</p>
 
-<img src="images/popularity and track.png", width="1150">
+<img src="images/popularity and track.png", width="100%">
 
 
 
@@ -239,7 +239,7 @@ from collections import Counter</pre></code>
 </p>
 
 
-<img src="images/1716086704775.png">
+<img src="images/1716086704775.png", width="100%">
 
 <p>
 Looking the the heatmap I saw that energy and loudness have some correlation. I also saw dancebility and valence, and accousticness and energy. I created several scatterplots to look for correlations in my data.</p>
@@ -249,7 +249,7 @@ sns.scatterplot(data= df_set, x= 'energy', y='loudness', hue='track_popularity')
 plt.text(0.05, 0.95, f'Correlation Coefficient: {correlation_coefficient:.2f}', transform=plt.gca().transAxes)
 </pre></code> 
 
-<img src="images/scatterplot1.png">
+<img src="images/scatterplot1.png", width="100%">
 
 
 <P>A correlation of 0.68 is considered a strong positive correlation. We can also visually see this as most of the data is near each other in a linear line indicating that there is a positive correlation.</p>
@@ -267,7 +267,7 @@ plt.ylabel('Valence')
 plt.show()
 </pre></code>
 
-<img src="images/scatterplot2.png">
+<img src="images/scatterplot2.png", width="100%">
 
 <p>Here we can see that the data have as correlation of 0.33 which means that there is little to no correlation. We can visually see this as the data points are scattered everywhere.</p>
 
@@ -284,7 +284,7 @@ plt.ylabel('Acousticness')
 plt.show()
 </pre></code>
 
-<img src="images/scatterplot3.png">
+<img src="images/scatterplot3.png", width="100%">
 
 <p>The data have as correlation of -0.54 which means that there is little to no correlation. We can visually see this as the data points are scattered everywhere.</p>
 
@@ -303,6 +303,38 @@ axis.set_ylabel('Popularity', fontsize=40)
 axis.set_xlabel('song title', fontsize=40)
 axis.tick_params(labelsize=20)  </code>
 
+<img src="images/bargraph1.png", width="100%">
+
+<p>I then created a bar chart for track_artist and track_popularity:
+</p>
+<pre><code class= "language-python">from collections import Counter
+    ​
+artist_popularity_sum = Counter()
+    ​
+    ​
+for l in df[["track_artist", "track_popularity"]].to_numpy():
+    artist_list = [x.strip() for x in l[0].split(',')]
+    for artist in artist_list:
+     artist_popularity_sum[artist] += float(l[1])
+    ​
+#split separates artists names
+#strip gets rid of spaces
+#popularity add points to an artist
+    ​
+    ​
+top_10_artist = artist_popularity_sum.most_common(10)
+xs = [a[0] for a in top_10_artist]
+ys = [a[1] for a in top_10_artist]
+    ​
+plt.figure(figsize=(20, 10))
+sns.set(style="whitegrid")
+axis = sns.barplot(x=xs, y=ys)
+    ​
+axis.set_ylabel('Popularity')
+axis.set_xlabel('artist')
+</code>
+
+<img src="images/bargraph2.png", width="100%">
 
 
 
