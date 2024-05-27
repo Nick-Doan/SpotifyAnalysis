@@ -500,7 +500,106 @@ The sum gives a much better picture toward a genre’s overall popularity and an
         <div id="evaluation">     
                     <h2  style="background-color: #1ED760;">Project Section 6: Evaluation</h2></div>
 
+<p>There was five main relationships that I explored in my data these were: 
+    1.)Energy and loudness
+    2.) Danceability vs. Valence
+    3.) Energy and Acousticness
+    4.) Song title and Popularity
+    5.) Popularity and Artist
+    </p>
 
+    <p>
+        The first method that will be used to validate the results is looking at the confounding variables. 
+        </p>
+    
+    <p>Another confounding variable could possibly be listener preferences. The data is from 1981-2020. The data could be getting skewed by certain years or eras of music. Certain genres were more popular during certain years. For example in the 1990s Alternative Rock was very popular (https://www.yellowbrick.co/blog/music/exploring-1990s-music-trends-a-nostalgic-journey ). In 2020 genres like Hip-hop and EDM were very popular.</p>
+
+    <img src="images/genres.png">
+
+
+<p>The next method that will be used is to check for overfitting. I will be using machine learning in python to check for overfitting for the three relationships we explored for correlation:
+
+</p>
+
+<p>1.)Energy vs. loudness
+    2.) Danceability vs. Valence
+    3.) Energy vs. Acousticness
+    </p>
+
+<p>The python libraries that will be used are: </p>
+
+
+<pre><code class= "language-python">from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+</code></pre>
+
+<p>The first section will be examining our chosen variables with track popularity. The second section will be examining the relationship between our chosen variables like Energy vs. Acousticness. </p>
+
+<p>The first that will be checked for overfitting is Energy vs Loudness and track popularity:</p>
+
+<img src="images/energyvsloudness.png", width="60%">
+
+<p>Here we see that that the training R squared is greater than the testing R squared. This indicates that the model could be overfitting. Which means that our models may only work with the data set we have and the results may not have the predictive power we think it has.</p>
+
+<p>The third is Energy vs. Acousticness and track popularity:</p>
+
+<img src="images/energy vs acousticness.png", width="60%">
+
+<p>Here we see that that the training R squared is greater than the testing R squared. This indicates that the model could be overfitting. Which means that our models may only work with the data set we have and the results may not have the predictive power we think it has.</p>
+
+<p>Given how low our R squares are for our data, this demonstrates that are chosen variables have very little predictive power for track popularity.  </p>
+
+<p>I will now examine the relationship between our chosen variables. The first relationship that will be examined will be Energy vs. Loudness.</p>
+
+<img src="images/energyvsloudness1.png", width="60%">
+
+<p>Here we see that there is no overfitting as the training R squared is smaller than the testing R squared. This means our models may have explanatory power outside our data set. </p>
+
+<p>Next will be Danceability vs. Valence:</p>
+
+<img src="images/danceabilityvsvalence.png", width="60%">
+
+<p>Here we see that there is no overfitting as the training R squared is smaller than the testing R squared. This means our models may have explanatory power outside our data set. </p>
+
+<p>The last relationship we will look at is Energy vs. Acousticness.</p>
+
+<img src="images/energyvsacoustic.png", width="60%">
+
+<p>Here we see that there is no overfitting as the training R squared is smaller than the testing R squared. This means our models may have explanatory power outside our data set. </p>
+
+<p>Given our results, I will say that my claims are limited to correlation. It is difficult to claim causation with the results we obtained from looking at correlation and the R squared values for our variables. </p>
+
+<p>We will investigate significance using p value. This will be done in python with the following libraries: </p>
+
+<pre><code class="python">import scipy.stats as stats
+</code></pre>
+
+<p>Energy vs. Loudness</p>
+
+<img src="images/energyvsloudnessp.png", width="60%">
+
+<p>Our null hypothesis is that there is no relationship between energy and loudness. Our alternative hypothesis is that there is a relationship between energy and loudness. My chosen alpha level is 0.05.  
+</p>
+
+<p>The p-value is practically 0 that means we can reject the null hypothesis and that the correlation is statistically significant. </p>
+
+<p>Danceability vs. Valence:</p>
+<img src="images/danceabilityvsvalencep.png", width="60%">
+
+<p>The p-value is practically 0 that means we can reject the null hypothesis and that the correlation is statistically significant. </p>
+
+<p>Energy vs Acousticness:</p>
+
+<img src="images/energyvsacousticnessp.png", width="60%">
+
+<p> The p-value is practically 0 that means we can reject the null hypothesis and that the correlation is statistically significant. </p>
+
+<p>Evaluating the p-values for the three scatterplots that I create leads me to believe that my findings do have business significance. This is because through out all the testing we have proven correlation with the chosen variables. Which can help and guide business decisions at Spotify. </p>
+
+<p>Given that R squared values are one way of measuring effect size, we can say that there is in fact correlation with the variables examined. This makes it worth using for business decisions.</p>
+
+<p>Given the testing and analysis I am satisfied with the results. I do not think that any further analysis is necessary for my data set. </p>
         <div id="interpretation">     
                         <h2 style="background-color: #1ED760;">Project Section 7: Interpretation</h2></div>
 
