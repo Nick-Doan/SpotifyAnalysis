@@ -55,6 +55,12 @@
         th {
             background-color: #f2f2f2;
         }
+
+        .default-font {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
     </style>
 </head>
 <body>
@@ -228,21 +234,98 @@
 
         <div id="introduction">
             <h2 style="background-color: #1ED760;">Project Section 1: Introduction</h2>
-                <p>     The data is called “30000 Spotify Songs” on Kaggle. It was uploaded by Joakim Arvidsson, a Grand Master on Kaggle. The data comes from Spotify via the spotifyr package. It is a package that pulls data from spotifiy’s API (https://www.rcharlie.com/spotifyr/). The data has several variables such as: track_id, track_name, track_artist, track_popularity, and       track_album_id. 
-                    The data is from Spotify. Spotify is a digital music streaming platform that offers millions of songs, podcasts, and other audio content. Spotify is offered across various platforms such as IOS and Android.  
-                    My approach to the data has several components. The first is asking the question, “How can we get consumers to listen to more songs?” According to Invespodia, 95% of Spotify’s revenue comes from premium subscriptions (How Spotify Makes Money: Premium Services and Ad-Supported Services). A big part of why people pay for Spotify is for the ad-free experience, unlimited skips, personalized playlists, etc (The Consumer Decision Journey Report | Spotify Ads). Given this research we know that the more that we can get people to listen to music on the platform, the more likely they are to 1.) listen to music with ad-support or 2.) pay for a premium account. The second step of analyzing the data is to do exploratory data analysis. To find patterns and trends in the data that will help support Spotify take actionable steps to answer the business question I proposed.  The third step will to do formal modeling. Fourth interpretation. Fifth communication.
-                    </p></div>
+                <pre style="font-family: Arial, sans-serif; font-size: 16px;">DATASET: 30000 SPOTIFY SONGS(Arvidsson, n.d.)
+
+SCHEDULED PLAN
+
+Week 1 (4/07/24):
+-Define the business question
+-find suitable data
+-complete part 1
+
+Week 2 (4/14/24):
+-ask business question
+-Find data
+-exploratory data analysis
+-find trends and patterns
+-complete part 2
+
+Week 3 (4/21/24):
+-data cleaning
+                    
+Week 4 (4/28/24):
+-Analysis
+
+Week 5 (5/05/24):
+-More analysis
+
+Week 6 (5/12/24):
+-PowerBI
+-insert data into power BI
+
+Week 7 (5/17/24):
+Interpretation
+
+Week 8 (5/22/24):
+Recommendations
+
+Week 9 (5/29/24): 
+Executive summary
+
+Week 10 (6/9/24):
+Presentation
+                    
+                </pre></div>
         <div id="context">     
             <h2 style="background-color: #1ED760;">Project Section 2: CONTEXT</h2>
-                <p>The data is called “30000 Spotify Songs” on Kaggle. It was uploaded by Joakim Arvidsson, a Grand Master on Kaggle. The data comes from Spotify via the spotifyr package. It is a package that pulls data from spotifiy’s API (https://www.rcharlie.com/spotifyr/). The data has several variables such as: track_id, track_name, track_artist, track_popularity, and       track_album_id. 
-                    The data is from Spotify. Spotify is a digital music streaming platform that offers millions of songs, podcasts, and other audio content. Spotify is offered across various platforms such as IOS and Android.  
-                    My approach to the data has several components. The first is asking the question, “How can we get consumers to listen to more songs?” According to Invespodia, 95% of Spotify’s revenue comes from premium subscriptions (How Spotify Makes Money: Premium Services and Ad-Supported Services). A big part of why people pay for Spotify is for the ad-free experience, unlimited skips, personalized playlists, etc (The Consumer Decision Journey Report | Spotify Ads). Given this research we know that the more that we can get people to listen to music on the platform, the more likely they are to 1.) listen to music with ad-support or 2.) pay for a premium account. The second step of analyzing the data is to do exploratory data analysis. To find patterns and trends in the data that will help support Spotify take actionable steps to answer the business question I proposed.  The third step will to do formal modeling. Fourth interpretation. Fifth communication.
-                    </p>
+                <p>The data is called “30000 Spotify Songs” on Kaggle. It was uploaded by Joakim Arvidsson, a Grand Master on Kaggle. The data comes from Spotify via the spotifyr package. It is a package that pulls data from spotifiy’s API (R Wrapper for the “Spotify” Web API, n.d.). The data has several variables such as: track_id, track_name, track_artist, track_popularity, and track_album_id. 
+
+                <p>Looking at if the data is a good sample I decided to measure the playlist genre: </p>
+
+                <img src="images/countofplaylistgenrebyplaylistgenre.png">
+
+                <p>Here we can see that the data is right skewed, but the genres are not too far off from each other for an analysis. The difference between edm and rock is 762. Ideally, we would have an even number of all songs. This spread could point to what songs are more popular on Spotify. The data is from Spotify. Spotify is a digital music streaming platform that offers millions of songs, podcasts, and other audio content. Spotify is offered across various platforms such as IOS and Android.  </p>
+
+                <p>My approach to the data has several components. The big question is, “How can we get consumers to listen to more songs?” According to Investopedia, 95% of Spotify’s revenue comes from premium subscriptions (Johnston, 2023). A big part of why people pay for Spotify is for the ad-free experience, unlimited skips, personalized playlists, etc (Spotify Editorial Team, 2023). Given this research we know that the more that we can get people to listen to music on the platform, the more likely they are to 1.) listen to music with ad-support or 2.) pay for a premium account. </p>
+                
+                <pre style="font-family: Arial, sans-serif; font-size: 16px;">
+The structured approach I will be taking for my analysis is: 
+
+1.)	defining the problem. 
+This is the guiding question for our analysis. What is the problem we are trying to solve and answer?
+
+2.)	Getting the right data.
+Is the data suitable for the analysis?
+
+3.)	Analysing the data. 
+This involves using several methods of analysis like regression analysis, cluster analysis, and hypothesis testing.
+
+4.)	Evaluating the results. 
+This step includes the following. Did we do the analysis correctly? Were there errors? Is our data significant? Were our models complex enough to answer our problem?
+
+5.)	Interpreting the results.
+This step includes the following. What do the results tell us? What is the relationship between the chosen variables? How strong was the relationship between the variables? How certain are we that the results are correct?
+
+6.)	Communicating the results.
+This step involves communicating the findings to stakeholders. What they mean and how to interpret them. 
+
+ 7.) Decide.
+
+This step is what actions the business can take in order solve the business problem at hand and support business decisions. 
+
+</pre>  
+
         <div id="problem">     
             <h2 style="background-color: #1ED760;">Project Section 3: Defining the problem</h2>
 
-            The problem definition is “How can Spotify improve the profit margins of their core business which is their digital music streaming services?” My business question definition is “How can we get consumers to listen to more songs and longer?” The problem's relevance is that Spotify has never been profitable for an entire fiscal year in its history. A company can only remain unprofitable for so long. It is crucial that Spotify find a path toward profitability. Analyzing Spotify’s user data is crucial as users are the main source of revenue for Spotify. By improving customer experience and retention, Spotify can improve its profit margins. Prioritizing data-driven insights will create a pathway toward sustainable profitability within its core music streaming business. 
-            The profitability challenge is not merely a financial problem; it is integral to Spotify's ability to innovate, invest in content acquisition, and expand its market share against competitors. Moreover, as the digital streaming landscape evolves with new entrants and changing consumer preferences, Spotify must adapt to remain relevant. Analyzing user data isn't just about understanding current behaviors; it is about anticipating future trends and evolving alongside user demands. By prioritizing data-driven insights and refining its platform to better serve user needs, Spotify can secure its position as a market leader and pave the way for sustainable profitability in an ever-changing digital music landscape.
+ <p> The problem definition is “How can Spotify improve the profit margins of their core business which is their digital music streaming services? My business question definition is “How can we get consumers to listen to more songs and longer?”
+    The problem's relevance is that Spotify has never been profitable for an entire fiscal year in its history. 
+    A company can only remain unprofitable for so long. It is crucial that Spotify find a path toward profitability.
+     Analyzing Spotify’s user data is crucial as users are the main source of revenue for Spotify. By improving customer experience and retention, Spotify can improve its profit margins. 
+     Prioritizing data-driven insights will create a pathway toward sustainable profitability within its core music streaming business.</p>
+     
+<p>The profitability challenge is not merely a financial problem; it is integral to Spotify's ability to innovate, invest in content acquisition, and expand its market share against competitors. Moreover, as the digital streaming landscape evolves with new entrants and changing consumer preferences, Spotify must adapt to remain relevant. Analyzing user data isn't just about understanding current behaviors; it is about anticipating future trends and evolving alongside user demands. By prioritizing data-driven insights and refining its platform to better serve user needs, Spotify can secure its position as a market leader and pave the way for sustainable profitability in an ever-changing digital music landscape.</p>
+
             
 
             
@@ -349,7 +432,7 @@ I also looked at the summary statistics. Analyzing the summary statistics did no
 <img src="images/popularity and track.png", width="100%">
 
 
-
+<p>Looking at the 5 top, Perment wave is a type of rock music (Permanent Wave Artists, Songs, Albums, Playlists and Listeners – Volt.fm, n.d.). Urban contemporary is a type of hop. 2020 Hits and 2019 Hits are just the most popular songs of this data set’s latest years which were 2019 and 2020. Indie Poptimism is a type of pop music. Lastly is Post teen pop which is another type of pop music (Post-Teen Pop Artists, Songs, Albums, Playlists and Listeners – Volt.fm, n.d.).  Here we see that pop music is very popular which is not as insight as I had hoped. Pop music being one of the most popular genres is not a new insight (Richter, 2018). </p>
 
 
         <div id="analysis">   
@@ -397,11 +480,12 @@ from collections import Counter</pre></code>
 Looking the the heatmap I saw that energy and loudness have some correlation. I also saw dancebility and valence, and accousticness and energy. I created several scatterplots to look for correlations in my data.</p>
 
 <pre><code class="language-python">correlation_coefficient = df_set['energy'].corr(df_set['loudness'])
-sns.scatterplot(data= df_set, x= 'energy', y='loudness', hue='track_popularity')
-plt.text(0.05, 0.95, f'Correlation Coefficient: {correlation_coefficient:.2f}', transform=plt.gca().transAxes)
+    sns.scatterplot(data= df_set, x= 'energy', y='loudness', hue='track_popularity')
+    sns.regplot(data=df_set, x='energy', y='loudness', scatter=False, color='red')
+    plt.title(f'Scatterplot of Energy vs. Loudness (Correlation Coefficient: {correlation_coefficient:.2f})')
 </pre></code> 
 
-<img src="images/scatterplot1.png", width="100%">
+<img src="images/v3.png", width="80%">
 
 
 <P>A correlation of 0.68 is considered a strong positive correlation. We can also visually see this as most of the data is near each other in a linear line indicating that there is a positive correlation.</p>
@@ -413,15 +497,16 @@ plt.text(0.05, 0.95, f'Correlation Coefficient: {correlation_coefficient:.2f}', 
 
 plt.figure(figsize=(10, 6))
 sns.scatterplot(data=df_set, x='danceability', y='valence', hue='track_popularity')
-plt.title(f'Scatterplot of Danceability vs. Valence (Correlation Coefficient: {correlation_coefficient:.2f})')
+sns.regplot(data=df_set, x='danceability', y='valence', scatter=False, color='red')
+plt.title(f'Danceability vs. Valence (Correlation Coefficient: {correlation_coefficient:.2f})')
 plt.xlabel('Danceability')
 plt.ylabel('Valence')
 plt.show()
 </pre></code>
 
-<img src="images/scatterplot2.png", width="100%">
+<img src="images/dvv2.png", width="80%">
 
-<p>Here we can see that the data have as correlation of 0.33 which means that there is little to no correlation. We can visually see this as the data points are scattered everywhere.</p>
+<p>I looked at the danceability vs valance since with a correlation of 0.33 there could be some sort of connection. I also layered the data points with their track popularity to see if there was an additional connection. Here we can see that there is little to no correlation between danceability and valence. This is because the data is scattered far apart from each other.  </p>
 
 
 <p>The variables that I decided to look at next were energy and acousticness:</p>
@@ -430,13 +515,14 @@ plt.show()
 
 plt.figure(figsize=(10, 6))
 sns.scatterplot(data=df_set, x='energy', y='acousticness', hue='track_popularity')
-plt.text(0.05, 0.97, f'Correlation Coefficient: {correlation_coefficient:.2f}', transform=plt.gca().transAxes)
+sns.regplot(data=df_set, x='energy', y='acousticness', scatter=False, color='red')
+plt.title(f'Energy vs. Acousticness (Correlation Coefficient: {correlation_coefficient:.2f})')
 plt.xlabel('Energy')
 plt.ylabel('Acousticness')
 plt.show()
 </pre></code>
 
-<img src="images/scatterplot3.png", width="100%">
+<img src="images/scatterplot3v2.png", width="80%">
 
 <p>The data have as correlation of -0.54 which means that there is little to no correlation. We can visually see this as the data points are scattered everywhere.</p>
 
@@ -504,21 +590,24 @@ The sum gives a much better picture toward a genre’s overall popularity and an
         <div id="evaluation">     
                     <h2  style="background-color: #1ED760;">Project Section 6: Evaluation</h2></div>
 
-<p>There was five main relationships that I explored in my data these were: 
-    1.)Energy and loudness
-    2.) Danceability vs. Valence
-    3.) Energy and Acousticness
-    4.) Song title and Popularity
-    5.) Popularity and Artist
-    </p>
+<pre style="font-family: Arial, sans-serif; font-size: 16px;">There was five main relationships that I explored in my data these were: 
+1.) Energy and loudness
+2.) Danceability vs. Valence
+3.) Energy and Acousticness
+4.) Song title and Popularity
+5.) Popularity and Artist
+    </pre>
 
     <p>
         The first method that will be used to validate the results is looking at the confounding variables. 
         </p>
-    
-    <p>Another confounding variable could possibly be listener preferences. The data is from 1981-2020. The data could be getting skewed by certain years or eras of music. Certain genres were more popular during certain years. For example in the 1990s Alternative Rock was very popular (https://www.yellowbrick.co/blog/music/exploring-1990s-music-trends-a-nostalgic-journey ). In 2020 genres like Hip-hop and EDM were very popular.</p>
+        <p>One confounding variable is the algorithms Spotify uses to label what music has energy. There is no exact documentation on how Spotify’s algorithms label and classify songs with their chosen metrics. This gives us an unclear picture on how exactly the data was labelled (Spotify, n.d.).</p>
+  <p>Another confounding variable could possibly be listener preferences. </p>
 
     <img src="images/genres.png">
+
+<p>The data is from 1981-2020. The data could be getting skewed by certain years or eras of music. Certain genres were more popular during certain years. For example in the 1990s Alternative Rock was very popular (Yellowbrick, 2023). In 2020 genres like Hip-hop and EDM were very popular.</p>
+
 
 
 <p>The next method that will be used is to check for overfitting. I will be using machine learning in python to check for overfitting for the three relationships we explored for correlation:
@@ -530,7 +619,7 @@ The sum gives a much better picture toward a genre’s overall popularity and an
     3.) Energy vs. Acousticness
     </p>
 
-<p>The python libraries that will be used are: </p>
+<p>The python libraries that were used: </p>
 
 
 <pre><code class= "language-python">from sklearn.model_selection import train_test_split
@@ -577,7 +666,7 @@ else:
 
 </code></pre>
 
-
+<img src="images/v3.png">
 <img src="images/energyvsloudness.png", width="60%">
 
 <p>Here we see that that the training R squared is greater than the testing R squared. This indicates that the model could be overfitting. Which means that our models may only work with the data set we have and the results may not have the predictive power we think it has.</p>
@@ -620,7 +709,7 @@ else:
 
 </code></pre>
 
-
+<img src="images/dvv2.png">
 <img src="images/danceabilityvsvalencevstrackpopularity.png", width="60%">
 
 <p>Here we see that that training R squared is less than the testing R squared. This indicates that the model is not overfitting. Which means that our models may have the predictive power that we think they do.</p>
@@ -668,7 +757,7 @@ else:
 </code></pre>
 
 
-
+<img src="images/scatterplot3v2.png">
 <img src="images/energy vs acousticness.png", width="60%">
 
 <p>Here we see that that the training R squared is greater than the testing R squared. This indicates that the model could be overfitting. Which means that our models may only work with the data set we have and the results may not have the predictive power we think it has.</p>
@@ -716,7 +805,7 @@ else:
 </code></pre>
 
 
-
+<img src="images/evl.png">
 <img src="images/energyvsloudness1.png", width="60%">
 
 <p>Here we see that there is no overfitting as the training R squared is smaller than the testing R squared. This means our models may have explanatory power outside our data set. </p>
@@ -759,6 +848,7 @@ else:
 
 </code></pre>
 
+<img src="images/dvc.png">
 <img src="images/danceabilityvsvalence.png", width="60%">
 
 <p>Here we see that there is no overfitting as the training R squared is smaller than the testing R squared. This means our models may have explanatory power outside our data set. </p>
@@ -804,7 +894,7 @@ else:
 
 
 
-
+<img src="images/eva.png">
 <img src="images/energyvsacoustic.png", width="60%">
 
 <p>Here we see that there is no overfitting as the training R squared is smaller than the testing R squared. This means our models may have explanatory power outside our data set. </p>
@@ -816,22 +906,25 @@ else:
 <pre><code class="python">import scipy.stats as stats
 </code></pre>
 
-<p>Energy vs. Loudness</p>
-
-<img src="images/energyvsloudnessp.png", width="60%">
-
 <p>Our null hypothesis is that there is no relationship between energy and loudness. Our alternative hypothesis is that there is a relationship between energy and loudness. My chosen alpha level is 0.05.  
 </p>
+
+<p>Energy vs. Loudness</p>
+<img src="images/evl.png">
+<img src="images/energyvsloudnessp.png", width="60%">
+
+
 
 <p>The p-value is practically 0 that means we can reject the null hypothesis and that the correlation is statistically significant. </p>
 
 <p>Danceability vs. Valence:</p>
+<img src="images/dvc.png">
 <img src="images/danceabilityvsvalencep.png", width="60%">
 
 <p>The p-value is practically 0 that means we can reject the null hypothesis and that the correlation is statistically significant. </p>
 
 <p>Energy vs Acousticness:</p>
-
+<img src="images/eva.png">
 <img src="images/energyvsacousticnessp.png", width="60%">
 
 <p> The p-value is practically 0 that means we can reject the null hypothesis and that the correlation is statistically significant. </p>
